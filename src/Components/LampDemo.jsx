@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { LampContainer } from "../Components/ui/lamp"; //
 
-import { Button } from "../components/ui/moving-border";
+import { Button } from "../Components/ui/moving-border";
 /**
  * LampDemo Component
  * Displays a demo with animated heading inside the LampContainer.
