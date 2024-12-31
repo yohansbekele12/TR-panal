@@ -21,7 +21,7 @@ export function WobbleCardDemo() {
           </p>
         </div>
         <img
-          src="/linear.webp"
+          src="https://miro.medium.com/v2/resize:fit:1114/1*swWatg841AfExABkiI28kQ.jpeg"
           width={500}
           height={500}
           alt="linear demo image"
@@ -52,7 +52,7 @@ export function WobbleCardDemo() {
           </p>
         </div>
         <img
-          src="/linear.webp"
+          src="https://miro.medium.com/v2/resize:fit:1114/1*swWatg841AfExABkiI28kQ.jpeg"
           width={500}
           height={500}
           alt="linear demo image"

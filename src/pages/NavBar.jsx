@@ -13,16 +13,19 @@ export default function NavBar() {
         <div className="navbar  ui px-10 py-4 flex justify-end">
           <ul className="navBarItem flex space-x-14">
             <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
               <a href="#experience">Experience</a>
             </li>
             <li>
-              <a href="#aboutMe">About</a>{" "}
+              <a href="#about">About</a>{" "}
             </li>
             <li>
-              <a href="#Contact">Contact</a>
+              <a href="#contact">Contact</a>
             </li>
             <li>
-              <a href="#Signup">Register </a>
+              <a href="#signup">Register </a>
             </li>
           </ul>
         </div>

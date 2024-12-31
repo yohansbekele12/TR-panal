@@ -4,6 +4,7 @@ import NavBar from "./pages/NavBar";
 import LandingPage from "./pages/LandingPage";
 import Experience from "./pages/Experience";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,6 +15,7 @@ function App() {
       <LandingPage />
       <Experience />
       <About />
+      <Contact />
     </>
   );
 }
