@@ -2,7 +2,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { LampContainer } from "../components/ui/lamp"; // Ensure correct path for LampContainer
+import { LampContainer } from "../Components/ui/lamp"; //
 
 import { Button } from "../components/ui/moving-border";
 /**
