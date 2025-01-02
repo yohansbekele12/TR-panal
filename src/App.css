@@ -133,3 +133,11 @@ html {
   display: flex;
   justify-content: space-between;
 }
+
+.H-image {
+  height: 80vh;
+}
+
+.TR {
+  font-family: "Poppins", sans-serif;
+}

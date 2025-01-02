@@ -6,11 +6,11 @@ import {
   ModalContent,
   ModalFooter,
   ModalTrigger,
-} from "../Components/ui/animated-modal";
+} from "./ui/animated-modal";
 // import Image from "../Components/Image";
 import { motion } from "framer-motion";
 
-export function AnimatedModalDemo() {
+export function AnimatedModal() {
   const images = [
     "https://images.unsplash.com/photo-1517322048670-4fba75cbbb62?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1573790387438-4da905039392?q=80&w=3425&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -20,7 +20,7 @@ export function AnimatedModalDemo() {
   ];
 
   return (
-    <div className="py-40 flex items-center justify-center">
+    <div className="flex ui items-center justify-center">
       <Modal>
         <ModalTrigger className="bg-black dark:bg-white dark:text-black text-white flex justify-center group/modal-btn">
           <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
