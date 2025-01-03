@@ -8,11 +8,15 @@ import { Button } from "../Components/ui/moving-border";
 export function LandingPage() {
   const [currentSection, setCurrentSection] = useState("");
 
-  const changeSection = (section) => {
-    setCurrentSection(section);
-    console.log(section);
-  };
-  // Add more navigation logic here to handle other sections
+  function changeSection(Section) {
+    setCurrentSection(Section);
+  }
+
+  function handlOverlay(e) {
+    if (e.target === e.currentTarget) {
+      setCurrentSection("");
+    }
+  }
 
   return (
     <div>
@@ -30,22 +34,19 @@ export function LandingPage() {
           >
             TR PANEL
             <br /> Effective Collaboration For Effective Service <br />
-            <Button
-              className="outlinedBtn ca"
-              onClick={(e) => {
-                e.preventDefault();
-                changeSection("login");
-              }}
-            >
-              {" "}
-              Log In
-            </Button>
+            <Button onClick={() => changeSection("login")}>Login</Button>
           </motion.h1>
         </LampContainer>
       </div>
-      <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-        {currentSection == "login" && <LoginForm />}
-      </div>
+
+      {currentSection == "login" && (
+        <div
+          className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center mt-20 w-full h-full"
+          onClick={handlOverlay}
+        >
+          <LoginForm />
+        </div>
+      )}
     </div>
   );
 }
