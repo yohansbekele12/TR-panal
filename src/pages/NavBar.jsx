@@ -7,7 +7,7 @@ export default function NavBar() {
       <div className="Container ui flex ">
         <div className="logo ui w-60 mx-10 mt-3">
           <a href="#" className="text-2xl ui ">
-            TR PANEL
+            WorkerDAY 
           </a>
         </div>
         <div className="navbar  ui px-10 py-4 flex justify-end">
@@ -15,15 +15,11 @@ export default function NavBar() {
             <li>
               <a href="#">Home</a>
             </li>
-            <li>
-              <a href="#experience">Experience</a>
-            </li>
+          
             <li>
               <a href="#about">About</a>{" "}
             </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
+           
             <li>
               <a href="#signup">Register </a>
             </li>

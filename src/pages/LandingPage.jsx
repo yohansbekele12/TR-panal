@@ -32,7 +32,7 @@ export function LandingPage() {
             }}
             className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-3xl font-medium tracking-tight text-transparent md:text-7xl"
           >
-            TR PANEL
+            WorkerDay
             <br /> Effective Collaboration For Effective Service <br />
             <Button onClick={() => changeSection("login")}>Login</Button>
           </motion.h1>
