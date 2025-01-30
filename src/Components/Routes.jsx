@@ -1,27 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./App.css";
-import NavBar from "./pages/NavBar";
-import { LandingPage } from "./pages/LandingPage";
-import About from "./pages/About";
-import AuthProvider from "./context/AuthProvider";
-
-import ProtectedRoute from "./Components/ProtectedRoute";
-import LoginForm from "./Components/LoginForm";
+import AuthProvider from "./context/AuthContext";
+import ProtectedRoute from "./components/ProtectedRoute";
+import LoginForm from "./components/LoginForm";
 import EmployeeDashboard from "./pages/EmployeeDashboard";
 import ManagerDashboard from "./pages/ManagerDashboard";
 import AdminDashboard from "./pages/AdminDashboard";
 
-const App = () => {
+const AppRoutes = () => {
   return (
     <AuthProvider>
       <Router>
-        <NavBar />
         <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/about" element={<About />} />
           <Route path="/login" element={<LoginForm />} />
 
-          {/* Protected Routes */}
           <Route
             path="/employee-dashboard"
             element={
@@ -47,11 +38,12 @@ const App = () => {
             }
           />
 
-          <Route path="*" element={<LandingPage />} />
+          {/* Default Redirect */}
+          <Route path="*" element={<LoginForm />} />
         </Routes>
       </Router>
     </AuthProvider>
   );
 };
 
-export default App;
+export default AppRoutes;

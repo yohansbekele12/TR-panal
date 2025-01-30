@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   IconBrandGithub,
   IconBrandGoogle,
   IconBrandOnlyfans,
 } from "@tabler/icons-react";
 
-const handleSubmit = (e) => {
-  e.preventDefault();
-  console.log("Form submitted");
-};
+
 
 const LoginForm = () => {
-  return (
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await login(formData.email, formData.password);
+  };
+
+return (
     <div className="mx-auto w-full max-w-md rounded-none border border-gray-300 bg-white p-4 shadow dark:border-gray-800 dark:bg-black md:rounded-2xl md:p-8">
       <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
         Welcome to TR PANALE
@@ -31,6 +39,7 @@ const LoginForm = () => {
             </label>
             <input
               id="firstname"
+              onChange={handleChange}
               placeholder="first name"
               type="text"
               className="w-full rounded-md border border-gray-300 p-2 dark:border-gray-700 dark:bg-gray-800"
@@ -48,6 +57,7 @@ const LoginForm = () => {
               placeholder="last name"
               type="text"
               className="w-full rounded-md border border-gray-300 p-2 dark:border-gray-700 dark:bg-gray-800"
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -63,6 +73,7 @@ const LoginForm = () => {
             placeholder="email"
             type="email"
             className="w-full rounded-md border border-gray-300 p-2 dark:border-gray-700 dark:bg-gray-800"
+            onChange={handleChange}
           />
         </div>
         <div className="mb-4 flex w-full flex-col space-y-2">
@@ -77,6 +88,7 @@ const LoginForm = () => {
             placeholder="password "
             type="password"
             className="w-full rounded-md border border-gray-300 p-2 dark:border-gray-700 dark:bg-gray-800"
+            onChange={handleChange}
           />
         </div>
 
